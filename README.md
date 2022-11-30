@@ -1,8 +1,7 @@
-# Powershell-Fileserver
-Make a webserver using powershell
-
 # Setup
 Edit the $share_dir variable to the directory you want to share
+Edit the $hostname variable to the hostname you want to use
+
 Run the script using
 powershell -File start.ps1
-Connect to it using your computers local IP followed with :8081
+Connect to it using the set hostname
