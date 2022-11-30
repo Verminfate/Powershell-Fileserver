@@ -1,5 +1,5 @@
-﻿$hostname = "http://localhost:8081/"
-$share_dir = "C:\Users\exampleuser\Downloads"
+$hostname = "http://192.168.111.100:8000/"
+$share_dir = "C:\Users\example.user\Downloads"
 
 cls
 Set-Location $share_dir
@@ -8,7 +8,7 @@ $httpsrvlsnr.Prefixes.Add($hostname);
 $httpsrvlsnr.Start();
 $webroot = New-PSDrive -Name webroot -PSProvider FileSystem -Root $PWD.Path
 [byte[]]$buffer = $null
-
+$hostname
 while ($httpsrvlsnr.IsListening) {
     try {
         $ctx = $httpsrvlsnr.GetContext();
